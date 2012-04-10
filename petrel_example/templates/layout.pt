@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    <metal:title metal:define-slot="title"></metal:title>
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <link rel="stylesheet" type="text/css"
+        href="${api.static_url('petrel_example:static/main.css')}"/>
+</head>
+<body>
+
+  <div id="header">
+    <a tal:attributes="href api.url(api.site)"
+       tal:content="api.site.title"/>
+  </div>
+
+  <div id="content">
+    <metal:content metal:define-slot="content"/>
+  </div>
+
+<tal:admin tal:replace="structure api.toolbar_js"/>
+</body>
+</html>

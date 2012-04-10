@@ -1,0 +1,13 @@
+<metal:layout metal:use-macro="api.admin_layout">
+<metal:content metal:fill-slot="content">
+
+<h1 tal:content="context.title"></h1>
+
+<p>
+  <a href="${api.context_url}"><img src="${api.context_url}"></a>
+  <a href="${api.context_url}">Download image</a>
+  (<span tal:replace="size"/>)
+</p>
+
+</metal:content>
+</metal:layout>
